@@ -8,7 +8,7 @@ export default function Login() {
     <div className="bg-gradient-to-r from-cyan-300 to-blue-400 bg-cover w-[100%] h-[100%] flex items-center justify-center">
       <div className="w-[900px] h-[500px] bg-white m-2 grid grid-cols-5">
         <div className="bg-gradient-to-r from-cyan-500 to-blue-600 col-span-3">
-          hhh{" "}
+          sajad sajad sajad ali
         </div>
         <div className="bg-white col-span-2 flex items-center justify-center">
           <div className=" w-[250px] h-[350px] flex flex-col">
