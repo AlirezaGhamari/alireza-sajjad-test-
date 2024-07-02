@@ -1,20 +1,28 @@
 import React, { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [value, setValue] = useState(true);
   const [valueusername, setValuesername] = useState("");
   const [valuepass, setValuepass] = useState("");
+  const Navigate = useNavigate();
+  const buttonHandler = () => {
+    console.log(valueusername, valuepass);
+    {
+      valueusername === "admin" && valuepass === "admin"
+        ? Navigate("/admin")``
+        : "";
+    }
+  };
   return (
-    <div className="bg-gradient-to-r from-cyan-300 to-blue-400 bg-cover w-[100%] h-[100%] flex items-center justify-center">
+    <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  bg-cover flex items-center justify-center">
       <div className="w-[900px] h-[500px] bg-white m-2 grid grid-cols-5">
-        <div className="bg-gradient-to-r from-cyan-500 to-blue-600 col-span-3">
-          sajad sajad sajad ali
-        </div>
+        <div className=" bg-pink-500 col-span-3">sajad sajad sajad ali</div>
         <div className="bg-white col-span-2 flex items-center justify-center">
           <div className=" w-[250px] h-[350px] flex flex-col">
             {/* first row */}
             <div className=" flex items-end justify-center">
-              <p className="text-[25px]">USER LOGIN</p>
+              <p className="text-[25px]">ورود به کاربر</p>
             </div>
             {/* second row */}
             <div className="flex flex-col ">
@@ -46,15 +54,15 @@ export default function Login() {
                   onClick={() => {
                     setValue(!value);
                   }}
-                 
                 ></input>
                 <p className="mx-1">show password</p>
               </div>
               <p>forget password</p>
             </div>
             <div className=" flex items-center justify-center mt-5">
-              <button className="bg-blue-400 w-[100px] h-[35px] rounded-xl "
-              onClick={()=>console.log({valueusername,valuepass})}
+              <button
+                className="bg-pink-500 w-[100px] h-[35px] rounded-xl "
+                onClick={buttonHandler}
               >
                 log in
               </button>

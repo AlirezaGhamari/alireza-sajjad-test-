@@ -1,12 +1,14 @@
 import React from "react";
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import Login from "./Components/Login";
 import Navbar from "./Components/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 export default function App() {
   return (
-    <div>
-      <Login />
+    <div className="">
+      <Navbar/>
+      
+   
     </div>
   );
 }
