@@ -10,8 +10,8 @@ export default function Login() {
     console.log(valueusername, valuepass);
     {
       valueusername === "admin" && valuepass === "admin"
-        ? Navigate("/admin")``
-        : "";
+        ? Navigate("/admin")
+        : alert("eror");
     }
   };
   return (
@@ -48,8 +48,9 @@ export default function Login() {
             </div>
 
             <div className="text-[8px] flex items-start justify-between px-2">
-              <div className="flex ">
-                <input
+              <div className="flex cursor-pointer  " >
+                <input 
+                className="cursor-pointer"
                   type="checkbox"
                   onClick={() => {
                     setValue(!value);
@@ -61,7 +62,7 @@ export default function Login() {
             </div>
             <div className=" flex items-center justify-center mt-5">
               <button
-                className="bg-pink-500 w-[100px] h-[35px] rounded-xl "
+                className="bg-pink-500 w-[100px] h-[35px] rounded-xl hover: hover:text-white "
                 onClick={buttonHandler}
               >
                 log in
